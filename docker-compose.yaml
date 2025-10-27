@@ -13,6 +13,7 @@ services:
       - N8N_PROTOCOL=http
       - NODE_ENV=production
       - WEBHOOK_URL=http://localhost:5678/
+      - N8N_SECURE_COOKIE=false
     volumes:
       - ./n8n_data:/home/node/.n8n
     healthcheck:
@@ -33,4 +34,5 @@ services:
 
 networks:
   n8n_network:
+
     driver: bridge
